@@ -1,0 +1,34 @@
+---
+title: "Title"
+author: "suttonbm"
+date: 2016-06-20
+author: suttonbm
+layout: post
+categories:
+  - projects
+  - travel
+  - stuff
+tags:
+  - a.list.of.tags
+project: datasciencecoursera.capstone
+excerpt: >
+  A short excerpt of what's in this post
+---
+
+```{r echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+
+require(knitcitations)
+bib.file <- "bibliographyfile"
+bib <- read.bibtex(bib.file)
+```
+
+```{r echo=FALSE, results='asis'}
+# Example inline citation
+print(citep(bib[["JSSv025i05"]]))
+```
+
+```{r echo=FALSE, results="asis"}
+# Generate bottom citations
+bibliography("html")
+```

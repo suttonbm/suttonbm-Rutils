@@ -1,0 +1,9 @@
+Package: suttonbm-Rutils
+Type: Package
+Title: Just some functions
+Version: 1.0
+Date: 2016-06-27
+Author: suttonbm
+Maintainer: suttonbm@gmail.com
+Description: Just a collection of functions I have created over time to support my R workflows
+License: GPL-3
