@@ -11,14 +11,14 @@ CompilePost <- function(src,
     opts_knit$set(out.format = 'jekyll')
     
     # Set figure path to store images
-    fig.path <- paste0(fig.path, sub(".Rmd$", "", basename(src)), "/")
+    fig.path <- paste0(fig.path, sub(".rmd$", "", basename(src)), "/")
     opts_chunk$set(fig.path = fig.path)
     
     # Set figure caption
     opts_chunk$set(fig.cap = "center")
     
     knit(src,
-         output = paste0(out.path, sub(".Rmd$", "", basename(src)), ".md"),
+         output = paste0(out.path, sub(".rmd$", "", basename(src)), ".md"),
          envir = parent.frame())
 }
 
@@ -46,6 +46,6 @@ PublishPost <- function(src,
     opts_chunk$set(fig.cap = "center")
     
     knit(src,
-         output = paste0(out.path, sub(".Rmd$", "",basename(src)), ".md"),
+         output = paste0(out.path, sub(".rmd$", "",basename(src)), ".md"),
          envir = parent.frame())
 }
