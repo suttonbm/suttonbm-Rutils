@@ -46,6 +46,6 @@ PublishPost <- function(src,
     opts_chunk$set(fig.cap = "center")
     
     knit(src,
-         output = paste0(out.path, sub(".Rmd$", "",basename(input)), ".md"),
+         output = paste0(out.path, sub(".Rmd$", "",basename(src)), ".md"),
          envir = parent.frame())
 }
