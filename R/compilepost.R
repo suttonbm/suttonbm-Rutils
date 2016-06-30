@@ -17,8 +17,7 @@ CompilePost <- function(src,
     # Set figure caption
     opts_chunk$set(fig.cap = "center")
     
-    
-    knit(input,
+    knit(src,
          output = paste0(out.path, sub(".Rmd$", "", basename(src)), ".md"),
          envir = parent.frame())
 }
@@ -46,7 +45,7 @@ PublishPost <- function(src,
     # Set figure caption
     opts_chunk$set(fig.cap = "center")
     
-    knit(input,
+    knit(src,
          output = paste0(out.path, sub(".Rmd$", "",basename(input)), ".md"),
          envir = parent.frame())
 }
