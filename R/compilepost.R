@@ -29,7 +29,7 @@ my_imgur_upload <- function(file) {
 
 PublishPost <- function(src,
                         out.path = "",
-                        base.url = "{{ site.url }}")
+                        base.url = "")
 {
     require(knitr)
     
